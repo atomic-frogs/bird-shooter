@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Hit.wav-84fcd66c1439ccbb91982a1fe38244ad.sample"
+
+[deps]
+
+source_file="res://assets/Bunny Shooter/Sounds/Hit.wav"
+dest_files=[ "res://.import/Hit.wav-84fcd66c1439ccbb91982a1fe38244ad.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
