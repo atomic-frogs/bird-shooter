@@ -14,12 +14,24 @@ config/name="Bird-shooter"
 run/main_scene="res://Scenes/World.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GLOBAL="*res://Scripts/global.gd"
+
 [display]
 
 window/size/width=205
 window/size/height=250
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/NbPM/plugin.cfg" )
+
+[global]
+
+addons=false
 
 [input]
 

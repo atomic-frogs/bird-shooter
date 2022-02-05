@@ -229,7 +229,7 @@ tracks/4/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 242, 199 )
+extents = Vector2( 242, 489.5 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 collision_mask = 6
@@ -255,8 +255,11 @@ rotation = -3.14159
 texture = ExtResource( 6 )
 
 [node name="RayCast2D" type="RayCast2D" parent="MuzzleFlash"]
+position = Vector2( -3.99998, 8.00001 )
 rotation = 3.14159
+scale = Vector2( 1.4, 1 )
 enabled = true
+cast_to = Vector2( 0, 125 )
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -277,11 +280,12 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -1, -22 )
+position = Vector2( -1, -150.5 )
 shape = SubResource( 7 )
 
 [node name="firing_rate" type="Timer" parent="."]
 wait_time = 0.3
 one_shot = true
+autostart = true
 
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

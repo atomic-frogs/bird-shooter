@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/parachuteGrub2.png-c0f3090f0ef0d9b6c239f0e502595059.stex"
+path="res://.import/tasks-solid.svg-a9ed75ca61cdbf00901ab75ac38792ba.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bunny Shooter/parachuteGrub2.png"
-dest_files=[ "res://.import/parachuteGrub2.png-c0f3090f0ef0d9b6c239f0e502595059.stex" ]
+source_file="res://addons/NbPM/icons/tasks-solid.svg"
+dest_files=[ "res://.import/tasks-solid.svg-a9ed75ca61cdbf00901ab75ac38792ba.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -1,12 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Bunny Shooter/bee1.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/grub.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Fly.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/World.gd" type="Script" id=5]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 153 )
+[ext_resource path="res://Scenes/floor.tscn" type="PackedScene" id=6]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 5 )
@@ -15,26 +14,48 @@ script = ExtResource( 5 )
 position = Vector2( 27, -31 )
 texture = ExtResource( 2 )
 
-[node name="Camera" type="Camera2D" parent="."]
-current = true
-
 [node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 100, 125 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( -505, 4 )
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2( 103, 124 )
+current = true
+zoom = Vector2( 2, 2 )
+
+[node name="label_score" type="Label" parent="Camera"]
+margin_left = 52.0
+margin_top = -108.0
+margin_right = 92.0
+margin_bottom = -94.0
 __meta__ = {
-"_edit_group_": true
+"_edit_use_anchors_": false
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 0, 5 )
-shape = SubResource( 1 )
+[node name="Area2D" parent="Camera" instance=ExtResource( 6 )]
+position = Vector2( 2, 139 )
 
-[node name="Fly" parent="." instance=ExtResource( 4 )]
-position = Vector2( 37, 92 )
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+[node name="Timer_fly" type="Timer" parent="."]
+wait_time = 0.5
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[node name="enemys" type="Node2D" parent="."]
+
+[node name="grub" parent="enemys" instance=ExtResource( 3 )]
+position = Vector2( 35, 9 )
+
+[node name="Fly" parent="enemys" instance=ExtResource( 4 )]
+position = Vector2( 45, 161 )
+
+[node name="Fly2" parent="enemys" instance=ExtResource( 4 )]
+position = Vector2( 160, 178 )
+
+[node name="Fly3" parent="enemys" instance=ExtResource( 4 )]
+position = Vector2( 28, 227 )
+
+[node name="Fly4" parent="enemys" instance=ExtResource( 4 )]
+position = Vector2( 102, 229 )
+
+[node name="Fly5" parent="enemys" instance=ExtResource( 4 )]
+position = Vector2( 181, 230 )
+
+[connection signal="timeout" from="Timer_fly" to="." method="_on_Timer_fly_timeout"]

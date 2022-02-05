@@ -28,7 +28,7 @@ func _physics_process(delta):
 			pass
 	if lifes <= 0:
 		death()
-	print(bullets)
+	#print(bullets)
 	velocity.y += gravity * delta
 	velocity.y = clamp(velocity.y, -gravity, gravity)
 	velocity = move_and_slide(velocity)
