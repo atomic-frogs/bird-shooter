@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/scratch_001.ogg-4da5c1fe85f7d5f481b0e1a6fbf00978.oggstr"
+
+[deps]
+
+source_file="res://assets/Bunny Shooter/Sounds/UI/scratch_001.ogg"
+dest_files=[ "res://.import/scratch_001.ogg-4da5c1fe85f7d5f481b0e1a6fbf00978.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

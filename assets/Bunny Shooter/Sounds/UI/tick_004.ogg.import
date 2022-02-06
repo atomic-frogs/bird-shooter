@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tick_004.ogg-3252c1615f072c4e1a977a9b527f0019.oggstr"
+
+[deps]
+
+source_file="res://assets/Bunny Shooter/Sounds/UI/tick_004.ogg"
+dest_files=[ "res://.import/tick_004.ogg-3252c1615f072c4e1a977a9b527f0019.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

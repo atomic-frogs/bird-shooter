@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/scroll_005.ogg-1e71b3e3ddf71dbed6d4b53199f96911.oggstr"
+
+[deps]
+
+source_file="res://assets/Bunny Shooter/Sounds/UI/scroll_005.ogg"
+dest_files=[ "res://.import/scroll_005.ogg-1e71b3e3ddf71dbed6d4b53199f96911.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

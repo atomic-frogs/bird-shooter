@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/enemyDeath1.wav-fb71e60ac352d8c8615cb9582792e1a3.sample"
+
+[deps]
+
+source_file="res://assets/Bunny Shooter/Sounds/enemyDeath1.wav"
+dest_files=[ "res://.import/enemyDeath1.wav-fb71e60ac352d8c8615cb9582792e1a3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

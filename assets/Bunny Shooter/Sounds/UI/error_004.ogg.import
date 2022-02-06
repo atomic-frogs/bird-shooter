@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/error_004.ogg-620c274c7029138e570a1eb5af82b30e.oggstr"
+
+[deps]
+
+source_file="res://assets/Bunny Shooter/Sounds/UI/error_004.ogg"
+dest_files=[ "res://.import/error_004.ogg-620c274c7029138e570a1eb5af82b30e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

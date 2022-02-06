@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pluck_001.ogg-271b2a2ff9ba46edd0320fb9c0d17c1a.oggstr"
+
+[deps]
+
+source_file="res://assets/Bunny Shooter/Sounds/UI/pluck_001.ogg"
+dest_files=[ "res://.import/pluck_001.ogg-271b2a2ff9ba46edd0320fb9c0d17c1a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
