@@ -30,7 +30,7 @@ func _process(delta):
 # enemy spawner
 onready var fly = preload ("res://Scenes/Fly.tscn")
 onready var grub = preload ("res://Scenes/grub.tscn")
-
+var side = true
 
 func _on_Timer_fly_timeout():
 	#var player = get_node("Path/To/Player")
@@ -44,24 +44,30 @@ func spawn_grub():
 	else:
 		pos.x -= rand_range(0, 100.0)
 	pos.y -= 70
-	e.position = pos
+	
 	if player.velocity.y < 0:
-		e.velocity.y = player.velocity.y * 1.20
+		e.velocity.y = player.velocity.y * 0.75
 	else:
 		e.velocity.y = 75
+	e.position = pos
 	add_child(e)
 
 func spawn_fly():
 	var e = fly.instance()
 	var pos = player.position
-	if randf() < 0.5:
+	if side:
 		pos.x += rand_range(0, 100.0)
+		side = false
 	else:
 		pos.x -= rand_range(0, 100.0)
-	pos.y += rand_range(70.0, 150.0)
-	e.position = pos
+		side = true
+	
 	if player.velocity.y < 0:
-		e.velocity.y = player.velocity.y * 1.20
+		e.velocity.y = player.velocity.y * 0.50
+		pos.y += rand_range(50, 100)
 	else:
-		e.velocity.y = 75
+		e.velocity.y = -player.velocity.y * 0.80
+		pos.y += rand_range(80, 120)
+	
+	e.position = pos
 	add_child(e)

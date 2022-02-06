@@ -21,7 +21,7 @@ onready var firing_timer = $firing_rate
 
 func _physics_process(delta):
 	get_input()
-	if shoot() or jump():
+	if shoot():
 		velocity.y = -jump_speed
 	else:
 		if velocity.y > 0:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Bunny Shooter/bee1.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/Fly.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/World.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/floor.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/pixel plataformer/Tilemap/tilemap.png" type="Texture" id=7]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 5 )
@@ -20,7 +21,6 @@ position = Vector2( 100, 125 )
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2( 103, 124 )
 current = true
-zoom = Vector2( 2, 2 )
 
 [node name="label_score" type="Label" parent="Camera"]
 margin_left = 52.0
@@ -57,5 +57,10 @@ position = Vector2( 102, 229 )
 
 [node name="Fly5" parent="enemys" instance=ExtResource( 4 )]
 position = Vector2( 181, 230 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 85, 198 )
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 169, 1010 )
 
 [connection signal="timeout" from="Timer_fly" to="." method="_on_Timer_fly_timeout"]
