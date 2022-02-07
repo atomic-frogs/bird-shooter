@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 export var speed = 100
-export var gravity = 400
+export var gravity = 300
 export var jump_speed = 400
 export (float, 0, 1.0) var friction = 0.5
 export (float, 0, 1.0) var acceleration = 0.8
@@ -16,7 +16,7 @@ onready var muzzle_flash = $MuzzleFlash
 onready var jump_sound = $jump_sound
 onready var shoot_sound = $shooting_sound
 onready var animations = $AnimationPlayer
-onready var raycast = $MuzzleFlash/RayCast2D
+onready var raycast = $RayCast2D
 onready var firing_timer = $firing_rate
 
 func _physics_process(delta):
@@ -32,6 +32,7 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 	velocity.y = clamp(velocity.y, -gravity, gravity)
 	velocity = move_and_slide(velocity)
+	GLOBAL.player_position = self.global_position
 
 func get_input():
 	dir = 0
@@ -72,7 +73,7 @@ func damage():
 
 func death():
 	#queue_free()
-	print("morreu")
+	pass
 
 
 func _on_Area2D_body_exited(body):

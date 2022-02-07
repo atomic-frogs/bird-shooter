@@ -31,10 +31,12 @@ func _process(delta):
 onready var fly = preload ("res://Scenes/Fly.tscn")
 onready var grub = preload ("res://Scenes/grub.tscn")
 var side = true
+var side2 = true
 
 func _on_Timer_fly_timeout():
 	#var player = get_node("Path/To/Player")
-	spawn_fly()
+	spawn_fly_below()
+	spawn_fly_above()
 
 func spawn_grub():
 	var e = grub.instance()
@@ -52,7 +54,7 @@ func spawn_grub():
 	e.position = pos
 	add_child(e)
 
-func spawn_fly():
+func spawn_fly_below ():
 	var e = fly.instance()
 	var pos = player.position
 	if side:
@@ -63,11 +65,27 @@ func spawn_fly():
 		side = true
 	
 	if player.velocity.y < 0:
-		e.velocity.y = player.velocity.y * 0.50
-		pos.y += rand_range(50, 100)
+		e.velocity.y = player.velocity.y * 0.90
+		pos.y += rand_range(125, 150)
 	else:
 		e.velocity.y = -player.velocity.y * 0.80
-		pos.y += rand_range(80, 120)
+		pos.y += rand_range(125, 150)
+	
+	e.position = pos
+	add_child(e)
+	
+func spawn_fly_above():
+	var e = fly.instance()
+	var pos = player.position
+	if side2:
+		pos.x += rand_range(0, 100.0)
+		side2 = false
+	else:
+		pos.x -= rand_range(0, 100.0)
+		side2 = true
+	
+	e.velocity.y = player.velocity.y * 0.90
+	pos.y -= rand_range(130, 150)
 	
 	e.position = pos
 	add_child(e)

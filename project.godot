@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "clouds",
+"language": "GDScript",
+"path": "res://Scripts/clouds.gd"
+} ]
+_global_script_class_icons={
+"clouds": ""
+}
+
 [application]
 
 config/name="Bird-shooter"
